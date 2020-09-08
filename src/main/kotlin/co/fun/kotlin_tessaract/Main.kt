@@ -25,8 +25,6 @@ fun main() {
     Imgproc.threshold(mat, mat, 244.0, 255.0, Imgproc.THRESH_BINARY)
     Core.bitwise_not(mat, mat)
 
-    Imgcodecs.imwrite("output.jpg", mat)
-
     val preparedImage = mat.toBufferedImage()
 
     val api = Tesseract()
